@@ -2,15 +2,19 @@
 const pitchSizeInput = document.getElementById('pitchSize');
 const conectorSizeInput = document.getElementById('conectorSize');
 const pinNumberInput = document.getElementById('pinNumber');
-const resultText = document.getElementById('resultText');
+const resultTextInch = document.getElementById('resultTextInch');
+const resultTextCm = document.getElementById('resultTextCm');
 
 // Function to calculate and update the result
 function updateResult() {
     const pitchSize = parseFloat(pitchSizeInput.value) || 0;
     const conectorSize = parseFloat(conectorSizeInput.value) || 0;
     const pinNumber = parseFloat(pinNumberInput.value) || 0;
-    const length = ((pitchSize * pinNumber) + (conectorSize * 2)).toFixed(2);
-    resultText.textContent = `${length} inch`;
+    const lengthInch = ((pitchSize * pinNumber) + (conectorSize * 2));
+    const lengthCm = (lengthInch * 2.54).toFixed(2);
+    const lengthInchFixed = lengthInch.toFixed(2);
+    resultTextInch.textContent = `${lengthInchFixed} inch`;
+    resultTextCm.textContent = `${lengthCm} cm`;
 }
 
 // Add event listeners to update on input change
