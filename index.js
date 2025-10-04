@@ -9,9 +9,7 @@ function updateResult() {
     const pitchSize = parseFloat(pitchSizeInput.value) || 0;
     const conectorSize = parseFloat(conectorSizeInput.value) || 0;
     const pinNumber = parseFloat(pinNumberInput.value) || 0;
-
     const length = ((pitchSize * pinNumber) + (conectorSize * 2)).toFixed(2);
-
     resultText.textContent = `${length} inch`;
 }
 
