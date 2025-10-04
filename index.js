@@ -2,8 +2,7 @@
 const pitchSizeInput = document.getElementById('pitchSize');
 const conectorSizeInput = document.getElementById('conectorSize');
 const pinNumberInput = document.getElementById('pinNumber');
-const resultTextInch = document.getElementById('resultTextInch');
-const resultTextCm = document.getElementById('resultTextCm');
+const resultTextMm = document.getElementById('resultTextMm');
 
 // Función para convertir decimal a fracción (al 1/16 más cercano)
 function decimalToFraction(decimal) {
@@ -47,11 +46,8 @@ function updateResult() {
     const pitchSize = parseFraction(pitchSizeInput.value);
     const conectorSize = parseFraction(conectorSizeInput.value);
     const pinNumber = parseFloat(pinNumberInput.value) || 0;
-    const lengthInch = ((pitchSize * pinNumber) + (conectorSize * 2));
-    const lengthCm = (lengthInch * 2.54).toFixed(2);
-    const lengthInchFraction = decimalToFraction(lengthInch);
-    resultTextInch.textContent = `${lengthInchFraction} inch`;
-    resultTextCm.textContent = `${lengthCm} cm`;
+    const lengthMm = ((pitchSize * pinNumber) + (conectorSize * 2)).toFixed(2);
+    resultTextMm.textContent = `${lengthMm} mm`;
 }
 
 // Add event listeners to update on input change

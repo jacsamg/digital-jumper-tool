@@ -20,15 +20,15 @@
                 <legend class="form__legend">Parameters</legend>
 
                 <div class="form__row">
-                    <label for="pitchSize" class="form__label">Pitch size (inch)</label>
-                    <input class="form__input" type="text" id="pitchSize" name="pitchSize" value="1/10"
-                        placeholder="Ej: 1/10 o 0.1" required>
+                    <label for="pitchSize" class="form__label">Pitch size (mm)</label>
+                    <input class="form__input" type="text" id="pitchSize" name="pitchSize" value="2.54"
+                        placeholder="Ej: 2.54" required>
                 </div>
 
                 <div class="form__row">
-                    <label for="conectorSize" class="form__label">Connector size (inch)</label>
-                    <input class="form__input" type="text" id="conectorSize" name="conectorSize" value="2/8"
-                        placeholder="Ej: 2/8 o 0.3" required>
+                    <label for="conectorSize" class="form__label">Connector size (mm)</label>
+                    <input class="form__input" type="text" id="conectorSize" name="conectorSize" value="8"
+                        placeholder="Ej: 8" required>
                 </div>
 
                 <div class="form__row">
@@ -42,8 +42,7 @@
 
         <aside class="result card">
             <h2 class="result__title">Wire's length</h2>
-            <p class="result__text" id="resultTextInch"></p>
-            <p class="result__text" id="resultTextCm"></p>
+            <p class="result__text" id="resultTextMm"></p>
         </aside>
     </main>
 

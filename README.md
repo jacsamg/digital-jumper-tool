@@ -4,8 +4,8 @@ Web app to calculate the length of a jumper wire based on pitch size, connector 
 
 ## Features
 
-- Input parameters: pitch size (inch), connector size (inch), and number of pins.
-- Calculates and displays the wire's length.
+- Input parameters: pitch size (mm), connector size (mm), and number of pins.
+- Calculates and displays the wire's length in millimeters.
 
 ## License
 
