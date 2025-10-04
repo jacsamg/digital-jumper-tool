@@ -1,11 +1,11 @@
 # Digital Jumper Tool
 
-A simple web application to calculate the length of a jumper wire based on pitch size, connector size, and number of pins.
+Web app to calculate the length of a jumper wire based on pitch size, connector size, and number of pins.
 
 ## Features
 
-- Input parameters: pitch size (inch), connector size (inch), and number of pins
-- Calculates and displays the wire's length
+- Input parameters: pitch size (inch), connector size (inch), and number of pins.
+- Calculates and displays the wire's length.
 
 ## How to Use
 
