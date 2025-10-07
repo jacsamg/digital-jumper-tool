@@ -3,6 +3,7 @@ const pitchSizeInput = document.getElementById('pitchSize');
 const conectorSizeInput = document.getElementById('conectorSize');
 const pinNumberInput = document.getElementById('pinNumber');
 const resultTextMm = document.getElementById('resultTextMm');
+const resultTextCm = document.getElementById('resultTextCm');
 
 // Methods
 function lengthCalculator(pitchSize, conectorSize, pinNumber) {
@@ -16,7 +17,9 @@ function updateResult() {
     const pitchSize = parseFloat(pitchSizeInput.value) || 0;
     const conectorSize = parseFloat(conectorSizeInput.value) || 0;
     const pinNumber = Math.max(0, parseInt(pinNumberInput.value, 10) || 0);
-    resultTextMm.textContent = lengthCalculator(pitchSize, conectorSize, pinNumber);
+    const lengthMm = parseFloat(lengthCalculator(pitchSize, conectorSize, pinNumber));
+    resultTextMm.textContent = lengthMm.toFixed(2);
+    resultTextCm.textContent = (lengthMm / 10).toFixed(2);
 }
 
 // Event listeners
