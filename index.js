@@ -14,8 +14,8 @@ function lengthCalculator(pitchSize, conectorSize, pinNumber) {
 }
 
 function updateResult() {
-    const pitchSize = parseFloat(pitchSizeInput.value) || 0;
-    const conectorSize = parseFloat(conectorSizeInput.value) || 0;
+    const pitchSize = pitchSizeInput.value || 0;
+    const conectorSize = conectorSizeInput.value || 0;
     const pinNumber = Math.max(0, parseInt(pinNumberInput.value, 10) || 0);
     const lengthMm = parseFloat(lengthCalculator(pitchSize, conectorSize, pinNumber));
     resultTextMm.textContent = lengthMm.toFixed(2);

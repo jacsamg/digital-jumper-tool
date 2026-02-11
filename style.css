@@ -37,37 +37,6 @@ body {
     padding: 20px 15px;
 }
 
-/* Decorative Elements */
-body::before,
-body::after {
-    content: '';
-    position: fixed;
-    pointer-events: none;
-    mix-blend-mode: screen;
-}
-
-body::before {
-    width: min(60vw, 420px);
-    height: 2px;
-    left: 10vw;
-    top: 12vh;
-    transform: translateZ(0);
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    opacity: 0.12;
-    will-change: transform, opacity;
-}
-
-body::after {
-    width: min(45vw, 300px);
-    height: 2px;
-    right: 8vw;
-    bottom: 8vh;
-    transform: translateZ(0);
-    background: linear-gradient(90deg, transparent, var(--accent-2), transparent);
-    opacity: 0.10;
-    will-change: transform, opacity;
-}
-
 /* Accessibility */
 a:focus,
 button:focus,
